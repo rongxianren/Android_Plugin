@@ -24,7 +24,7 @@ class LoadUtils {
             hostDexElementsField.isAccessible = true
             val hostDexElements = hostDexElementsField.get(hostPathList) as Array<*>
 
-            
+
         }
     }
 }
