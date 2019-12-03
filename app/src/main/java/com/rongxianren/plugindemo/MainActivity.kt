@@ -1,13 +1,10 @@
-package com.rongxianren.plugin
+package com.rongxianren.plugindemo
 
 import android.app.Activity
-import android.content.Intent
-import android.content.res.AssetManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
-import dalvik.system.DexClassLoader
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,11 +33,10 @@ class MainActivity : AppCompatActivity() {
 
         Log.d(TAG, AppCompatActivity::class.java.classLoader.toString())
 
-//        ClassLoader
-        var intent:Intent = Intent()
 
-//        intent.setComponent()
-//
-//        AssetManager
+        val pluginClass = Class.forName("com.rongxianren.plugin.PluginClass")
+        val method = pluginClass.getMethod("test")
+        method.invoke(pluginClass.newInstance())
+
     }
 }

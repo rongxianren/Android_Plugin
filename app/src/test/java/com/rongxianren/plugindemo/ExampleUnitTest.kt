@@ -1,4 +1,4 @@
-package com.rongxianren.plugin
+package com.rongxianren.plugindemo
 
 import org.junit.Test
 
